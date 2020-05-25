@@ -34,7 +34,7 @@ describe("Testing new user creation", async () => {
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
     email: faker.internet.email(),
-    password: "testingpw"
+    password: "Testingpw1234"
   };
   it("tests if creating route really creates a new user", async () => {
     const response = await supertest(app)

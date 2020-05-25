@@ -30,7 +30,7 @@ module.exports = {
         }
       })
       .then(result => {
-        return bcrypt.hash("nonhashedpassword", 12);
+        return bcrypt.hash("InitialUserPW123", 12);
       })
       .then(hashedpw => {
         queryInterface.bulkInsert("users", [
