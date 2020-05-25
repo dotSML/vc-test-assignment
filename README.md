@@ -11,9 +11,11 @@ For schema creation, Sequelize is used, which is well known ORM for Node and SQL
 Passwords are hashed using bcryptjs package, which gives the application production ready quality in terms of protecting your users data.
 <br>
 Including .env files in repo is a very bad practice, however for this assignment's purpose it's fine, which is why it's included in this repo for now.
+The .env files includes the secret for signing and verifying JWT and DB credentials.
 <h4>Testing</h4>
 Using Jest for testing. 
 Tests performed for user endpoints. 
+Command for running the tests <code>npm run test</code>
 
 <h2>Client App</h2>
 The React application was generated with <code>npx create-react-app --template typescript</code> builder. <br>
@@ -24,6 +26,7 @@ The authentication stores the JWT received from backend in localstorage and assu
 <h4>Testing</h4>
 Using Jest for testing.
 Tests performed to ensure Redux actions are performing as expected.
+Command for running the tests <code>npm run test</code>
 
 
 <h2>Installation</h2>
