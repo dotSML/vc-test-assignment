@@ -1,0 +1,27 @@
+.user_landing {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    border: rgba(0,0,0,.2);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,.2);
+    padding: 2rem;
+    margin: 5rem auto;
+}
+
+.user_landing-btn {
+    background-color: #7b1cdb;
+    margin-top: 2rem;
+}
+
+.user_landing-btn a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    color: white;
+}
+
+.user_landing-name {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,71 @@
+.login-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,.15);
+    padding: 2rem;
+    margin: 10rem auto;
+    border-radius: 8px;
+}
+
+.login-prompt--header {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.login-prompt-form-group {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.login-prompt-form-group label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.login-prompt-form-group input {
+    width: 100%;
+    border: 1px solid black;
+    padding: 0.2rem;
+    font-size: 1.4rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 3px;
+}
+
+.login-prompt form {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-prompt-btn {
+    margin-top: 2rem;
+    background-color: #7164d4;
+    color: white;
+    padding: .5rem;
+    font-size: 2rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.login-prompt-signup {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+
+.login-prompt-error {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: red;
+}
