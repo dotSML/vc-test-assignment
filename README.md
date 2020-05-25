@@ -8,6 +8,7 @@ This application is using Node with Express server framework, which gives the de
 For authentication, JWT is used, which gives you simple and secure authentication flow. <br>
 All data, that should be out of sight for everyone else, is stored in an environment variable using dotenv package. <br>
 For schema creation, Sequelize is used, which is well known ORM for Node and SQL databases and gives you easy way to manipulate and utilize your database models. <br>
+Passwords are hashed using bcryptjs package, which gives the application production ready quality in terms of protecting your users data.
 <h4>Testing</h4>
 Using Jest for testing. 
 Tests performed for user endpoints. 
@@ -17,6 +18,7 @@ The React application was generated with <code>npx create-react-app --template t
 The application uses TypeScript, which gives the developer the safety net of validating the types and also provides you with awesome autocomplete on your models while developing. <br>
 For global state management - Redux is used. <br> Being an overkill for an application of this size, sure, but saves the developer from some headache associated with passing down endless props and of course, vastly improves the scalability of the application should new features need to be implemented. <br>
 The authentication stores the JWT received from backend in localstorage and assumes it's valid - real validation of token is done on the backend upon requesting from protected routes. <br>
+
 <h4>Testing</h4>
 Using Jest for testing.
 Tests performed to ensure Redux actions are performing as expected.
@@ -33,4 +35,4 @@ Run the command <code>npm install</code> to install all the necessary dependenci
 Once it's finished, run the command <code>npm run start</code> to start the client app.
 
 <h3>Time Tracking</h3>
-This assignment took me 6h 48min to develop, and I spent most of the time researching different testing techniques and practices, which I now am sure, I have a lot to teach myself.
+This assignment took me 6h 48min to develop, spending most of the time researching different testing techniques and practices, which I now am sure, I have a lot to teach myself.
