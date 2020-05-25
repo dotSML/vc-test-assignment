@@ -9,6 +9,8 @@ For authentication, JWT is used, which gives you simple and secure authenticatio
 All data, that should be out of sight for everyone else, is stored in an environment variable using dotenv package. <br>
 For schema creation, Sequelize is used, which is well known ORM for Node and SQL databases and gives you easy way to manipulate and utilize your database models. <br>
 Passwords are hashed using bcryptjs package, which gives the application production ready quality in terms of protecting your users data.
+<br>
+Including .env files in repo is a very bad practice, however for this assignment's purpose it's fine, which is why it's included in this repo for now.
 <h4>Testing</h4>
 Using Jest for testing. 
 Tests performed for user endpoints. 
