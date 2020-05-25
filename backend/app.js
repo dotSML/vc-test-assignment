@@ -29,7 +29,7 @@ app.use((error, req, res, next) => {
 db.sync()
   .then(success => {
     console.log("Server Listening!");
-    app.listen(8080);
+    app.listen(8000);
   })
   .catch(err => {
     console.log("Error setting up server!");

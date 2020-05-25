@@ -1,8 +1,9 @@
 import axios from "axios";
+import { URI } from "../../../config";
 
 const fetchUser = async (userId: number) => {
   return axios.post(
-    "http://localhost:8080/users",
+    URI,
     {
       userId: userId
     },
