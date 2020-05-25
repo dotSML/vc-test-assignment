@@ -7,7 +7,7 @@ describe("Testing if inital user is created", () => {
   it("tests the user creation route and returns an initial user from initial migration", async () => {
     const firstRes = await supertest(app)
       .post("/login")
-      .send({ email: "test@kasutaja.ee", password: "nonhashedpassword" });
+      .send({ email: "test@kasutaja.ee", password: "InitialUserPW123" });
     const token = firstRes.body.token;
     const userId = firstRes.body.userId;
 
@@ -49,7 +49,7 @@ describe("Testing if login sends back a token", async () => {
   it("tests if logging in sends back a token that can be used for authenticating", async () => {
     const response = await supertest(app)
       .post("/login")
-      .send({ email: "test@kasutaja.ee", password: "nonhashedpassword" });
+      .send({ email: "test@kasutaja.ee", password: "InitialUserPW123" });
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty("token");
   });
