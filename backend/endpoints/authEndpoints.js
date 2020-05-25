@@ -11,7 +11,9 @@ router.post(
       .isEmail()
       .withMessage("Please enter a valid email")
       .normalizeEmail(),
-    body("password").isLength({ min: 5 }),
+    body("password")
+      .isLength({ min: 8 })
+      .matches("^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"),
     body("firstName")
       .trim()
       .not()

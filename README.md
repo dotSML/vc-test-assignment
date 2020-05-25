@@ -8,7 +8,8 @@ This application is using Node with Express server framework, which gives the de
 For authentication, JWT is used, which gives you simple and secure authentication flow. <br>
 All data, that should be out of sight for everyone else, is stored in an environment variable using dotenv package. <br>
 For schema creation, Sequelize is used, which is well known ORM for Node and SQL databases and gives you easy way to manipulate and utilize your database models. <br>
-Passwords are hashed using bcryptjs package, which gives the application production ready quality in terms of protecting your users data.
+Passwords are hashed using bcryptjs package, which gives the application production ready quality in terms of protecting your users data. <br>
+Password minimal length should be at least 8 characters, to make the password less susceptible to brute force attacks or plain guessing.
 <br>
 Including .env files in repo is a very bad practice, however for this assignment's purpose it's fine, which is why it's included in this repo for now.
 The .env files includes the secret for signing and verifying JWT and DB credentials.

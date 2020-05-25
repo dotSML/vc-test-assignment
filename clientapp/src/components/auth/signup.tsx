@@ -14,7 +14,7 @@ const Signup: React.FC<{ isAuth: boolean }> = ({ isAuth }) => {
       history.push("/");
     }
   }, []);
-
+  const passwordPattern = `^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$`;
   const validationSchema = Joi.object({
     email: Joi.string()
       .required()
@@ -28,9 +28,14 @@ const Signup: React.FC<{ isAuth: boolean }> = ({ isAuth }) => {
       .required()
       .error(new Error("Last name has to be at least 2 characters long")),
     password: Joi.string()
-      .min(5)
+      .min(8)
+      .regex(RegExp(passwordPattern))
       .required()
-      .error(new Error("Password has to be at least 5 characters long"))
+      .error(
+        new Error(
+          "Password has to be at least 8 characters long and should contain at least one letter and one number"
+        )
+      )
   });
 
   const [firstName, setFirstName] = useState<string>("");
@@ -39,6 +44,7 @@ const Signup: React.FC<{ isAuth: boolean }> = ({ isAuth }) => {
   const [password, setPassword] = useState<string>("");
 
   const handleSignup = () => {
+    console.log("SIGNUP");
     setErrorMsg("");
     const { error, validate } = validationSchema.validate({
       firstName: firstName,
