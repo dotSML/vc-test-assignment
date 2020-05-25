@@ -32,6 +32,7 @@ Command for running the tests <code>npm run test</code>
 <h2>Installation</h2>
 In your local MySQL database instance, create a database called <code>test_assignment</code><br>
 After doing so, navigate to <code>vc-test-assignment/backend</code>. First run the command <code>npm install</code> to install all the necessary dependencies. <br>
+Then install Sequelize-CLI globally <code>sudo npm install -g sequelize-cli</code>
 Database credentials are - user: root/password: "test"
 Then, use <code>sequelize db:migrate</code> to update your database according to the schema. <br>
 Once it's done, you can run <code>npm start</code> to spin up the Node server. It will now be listening for requests. <br>

@@ -4,12 +4,22 @@ const faker = require("faker");
 
 describe("Testing if inital user is created", () => {
   it("tests the user creation route and returns an initial user from initial migration", async () => {
+    const firstRes = await supertest(app)
+      .post("/login")
+      .send({ email: "test@kasutaja.ee", password: "nonhashedpassword" });
+    const token = firstRes.body.token;
+    const userId = firstRes.body.userId;
+
     const response = await supertest(app)
       .post("/users")
-      .send({ userId: 1 });
+      .send({ userId: userId })
+      .set({
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token
+      });
     expect(response.status).toBe(200);
     expect(response.body.user).toEqual({
-      id: 1,
+      id: userId,
       firstName: "Test",
       lastName: "Kasutaja",
       email: "test@kasutaja.ee",
