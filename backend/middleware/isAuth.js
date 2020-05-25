@@ -6,6 +6,7 @@ module.exports = (req, res, next) => {
   if (!header) {
     req.isAuth = false;
     const error = new Error("No Authorization header");
+    error.statusCode = 401;
     return next(error);
   }
   const token = header.split(" ")[1];
@@ -15,12 +16,14 @@ module.exports = (req, res, next) => {
   } catch (err) {
     req.isAuth = false;
     const error = new Error("Token could not be verified");
+    error.statusCode = 401;
     return next(error);
   }
 
   if (!verifiedToken) {
     req.isAuth = false;
     const error = new Error("No token provided");
+    error.statusCode = 401;
     return next(error);
   }
 
