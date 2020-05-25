@@ -1,4 +1,5 @@
 const app = require("../../app");
+const db = require("../../util/db");
 const supertest = require("supertest");
 const faker = require("faker");
 
@@ -52,4 +53,8 @@ describe("Testing if login sends back a token", async () => {
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty("token");
   });
+});
+afterAll(done => {
+  db.close();
+  done();
 });

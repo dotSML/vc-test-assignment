@@ -8,7 +8,6 @@ exports.signup = async (req, res, next) => {
   try {
     validateData(req);
     const { firstName, lastName, email, password } = req.body;
-    console.log(email, password, firstName, lastName);
     const existingUser = await User.findAll({ where: { email: email } });
     if (existingUser.length) {
       console.log(existingUser, "EXISTING");

@@ -3,7 +3,7 @@ import { URI } from "../../../config";
 
 const fetchUser = async (userId: number) => {
   return axios.post(
-    URI,
+    URI + "/users",
     {
       userId: userId
     },

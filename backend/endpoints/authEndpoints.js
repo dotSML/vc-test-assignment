@@ -10,13 +10,6 @@ router.post(
     body("email")
       .isEmail()
       .withMessage("Please enter a valid email")
-      .custom((value, { req }) => {
-        return User.findAll({ where: { email: value } }).then(user => {
-          if (!user) {
-            return Promise.reject("Email already exists");
-          }
-        });
-      })
       .normalizeEmail(),
     body("password").isLength({ min: 5 }),
     body("firstName")

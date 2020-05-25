@@ -26,7 +26,7 @@ The authentication stores the JWT received from backend in localstorage and assu
 <h4>Testing</h4>
 Using Jest for testing.
 Tests performed to ensure Redux actions are performing as expected.
-Command for running the tests <code>npm run test</code>
+Command for running the tests <code>npm run test a</code>
 
 
 <h2>Installation</h2>

@@ -56,12 +56,11 @@ const Signup: React.FC<{ isAuth: boolean }> = ({ isAuth }) => {
       password: password
     })
       .then(response => {
-        console.log(response);
         toast.success("Creating an user - SUCCESS!");
         return history.push("/login");
       })
       .catch(err => {
-        console.log(err);
+        setErrorMsg(err.response.data.message);
       });
   };
 
