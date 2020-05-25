@@ -26,4 +26,11 @@ Tests performed to ensure Redux actions are performing as expected.
 In your local MySQL database instance, create a database called <code>test_assignment</code><br>
 After doing so, navigate to <code>vc-test-assignment/backend</code>. First run the command <code>npm install</code> to install all the necessary dependencies. <br>
 Then, use <code>sequelize db:migrate</code> to update your database according to the schema. <br>
-Once it's done, you can run <code>nodemon app</code>
+Once it's done, you can run <code>npm start</code> to spin up the Node server. It will now be listening for requests. <br>
+<br>
+Now that you have the server running, navigate to <code>vc-test-assignment/clientapp</code> <br>
+Run the command <code>npm install</code> to install all the necessary dependencies. <br>
+Once it's finished, run the command <code>npm run start</code> to start the client app.
+
+<h3>Time Tracking</h3>
+This assignment took me 6h 48min to develop, and I spent most of the time researching different testing techniques and practices, which I now am sure, I have a lot to teach myself.
